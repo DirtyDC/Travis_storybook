@@ -1,2 +1,2 @@
 # Travis_storybook
-Short storybook project for my son
+Hi, Im new to codeing, Ive created this little project for my son as a way to practice, if you have any recomendations or tips let me know, otherwise enjoy...
