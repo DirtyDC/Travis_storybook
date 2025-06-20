@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page2</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<audio id="pageSound" src="pageturn.mp3" preload="auto"></audio>
+</head>
+ <nav><a href="index.html" class="button-link">
+  <i class="fas fa-home"></i>
+  <br>
+Home
+</a>
+
+<body>
+  <br>
+    <h1> Training Begins</h1>
+    <br>
+    <br>
+    <p>Back at home, Travis let Charmander out. The two quickly bonded, sharing food and 
+        playing in the fields behind his house. But Travis knew being friends wasn't enough. 
+        They had to train.
+</p>
+
+<div class="training">   
+<p>Every morning, they ran laps, practiced moves like Ember and Scratch, and lifted weights together. 
+    Travis used homemade dummies for target practice. Charmander grew stronger, faster, and more confident 
+    each day.
+</p>
+
+<img src="images/p2training.png" alt="Charmander lifting weights">
+</div>
+
+<div class="pidgeyfight">
+  <p>
+    One afternoon, while training near the river, a wild Pidgey attacked. Travis gave his first 
+    real command: “Charmander, use Ember!” The flame scorched the air and sent the Pidgey flying. 
+    It was a small battle, but it proved they were improving.
+  </p>
+  <img src="images/p2fight.png" alt="Fighting Pidgey">
+</div>
+
+<p>
+  As the sun set, Travis looked at Charmander and smiled. “We’re ready for anything,” he said. 
+  Charmander growled happily, tail flame burning bright.
+</p>
+
+  <div class="slideshow">
+  <img src="images/p2bond.png" class="slide active" />
+  <img src="images/p2sunset.png" class="slide" />
+ 
+</div>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  function showNextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 2000); // change image every 3 seconds
+</script>
+<br>
+
+<div class="pagelinks">
+  <a href="#" class="button-link" onclick="playSoundAndGo('page1.html')">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+  <a href="#" class="button-link" onclick="playSoundAndGo('page3.html')">
+    <i class="fas fa-arrow-right"></i>
+  </a>
+</div>
+<script>
+  function playSoundAndGo(targetPage) {
+    const audio = document.getElementById('pageSound');
+    audio.currentTime = 0;
+    audio.play();
+
+    setTimeout(() => {
+      window.location.href = targetPage;
+    }, 900); // Adjust time to match your sound length
+  }
+</script>
+
+</body>
+</html>

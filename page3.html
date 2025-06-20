@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<audio id="pageSound" src="pageturn.mp3" preload="auto"></audio>
+
+</head>
+ <nav><a href="index.html" class="button-link">
+  <i class="fas fa-home"></i>
+  <br>
+  Home
+</a>
+
+<body>
+    <br>
+    <h1>First Battles and a Big Opportunity</h1>
+<br>
+<br>
+    <p>Travis set off on his journey, walking from town to town and challenging young trainers. 
+        He faced a Farmer with a Beedrill, a Policewoman with a Geodude, and an Offce worker with a 
+        Nidorino. Each battle was tough, but Travis and Charmander always gave it their all.
+</p>
+<img src="images/p3battles.png" width="50%">
+
+<div class="poster">
+<p>After one particularly close win, Travis sat at a café with Charmander resting beside him. 
+    He noticed a poster on a bulletin board:
+</p>
+</div>
+<img src="images/p3poster.png" width="50%" alt="The guys tear down a tournament poster and get ready to enter.">
+
+
+<p>His heart raced. This was it. A real shot to prove himself. He tore off the poster, 
+    eyes burning with determination. “Let’s enter,” he said to Charmander. “Let’s show them what we’ve got.”
+</p>
+
+<p>Charmander growled with excitement, its flame flaring brighter than ever.
+</p>
+<img src="images/p3bright.png" width="50%" alt="Travis and Carmander standing together, Charmander's tail is burning bright.">
+<br>
+
+<div class="pagelinks">
+  <a href="#" class="button-link" onclick="playSoundAndGo('page2.html')">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+  <a href="#" class="button-link" onclick="playSoundAndGo('page4.html')">
+    <i class="fas fa-arrow-right"></i>
+  </a>
+</div>
+<script>
+  function playSoundAndGo(targetPage) {
+    const audio = document.getElementById('pageSound');
+    audio.currentTime = 0;
+    audio.play();
+
+    setTimeout(() => {
+      window.location.href = targetPage;
+    }, 900); // Adjust time to match your sound length
+  }
+</script>
+
+</body>
+</html>

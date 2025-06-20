@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon-story</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<audio id="pageSound" src="pageturn.mp3" preload="auto"></audio>
+
+
+<head>
+  <nav><a href="index.html" class="button-link">
+  <i class="fas fa-home"></i>
+  <br>
+  Home
+</a>
+
+<body>
+<br>
+    <br>
+    <h1>The Beginning of Travis’s Journey</h1>
+    <br>
+    <br>
+    <br>
+    <div class="bedroom">
+    <p>In the peaceful town of Chadsmoor, a six year old boy named Travis dreamed 
+        of becoming a Pokémon Master. While others played games, he studied Pokémon 
+        types, moves, and strategies. One sunny morning, he wandered into the woods
+         with a single Poké Ball in his pocket, determined to find his first partner.
+</p>
+<img src="images/p1study.png" alt="Little boy studying Pokemone in his bedroom" width="50%">
+</div>
+<br>
+<br>
+<div class="berry">
+<p>After hours of walking, he heard rustling in the bushes. Carefully stepping closer, 
+    he saw a Charmander—its tiny flame-tail flickering as it warmed itself on a rock. Travis 
+    held his breath. He reached into his backpack, took out a berry, and gently placed it on 
+    the ground. The Charmander sniffed the air, took a few steps, and began nibbling the berry.
+</p>
+<img src="images/p1berry.png" alt="Small blond boy puts berries on the ground and Charmander picks them up">
+</div>
+
+<p>Seeing his chance, Travis tossed his Poké Ball. It hit the Charmander, opened with a flash, 
+    and the little fire Pokémon disappeared inside. The ball shook… once… twice… three times—click! 
+    He had caught his first Pokémon! Eyes wide with joy, Travis held the Poké Ball up and whispered, 
+    “We’re going to be the best, partner.”
+</p>
+
+<div class="slideshow">
+  <img src="images/p1gif1.png" class="slide active" />
+  <img src="images/p1gif2.png" class="slide" />
+  <img src="images/p1gif3.png" class="slide" />
+  <img src="images/p1gif4.png" class="slide" />
+</div>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  function showNextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 2000); 
+</script>
+
+<br>
+
+<div class="pagelinks">
+ 
+  <a href="#" class="button-link" onclick="playSoundAndGo('page2.html')">
+    <i class="fas fa-arrow-right"></i>
+  </a>
+</div>
+<script>
+  function playSoundAndGo(targetPage) {
+    const audio = document.getElementById('pageSound');
+    audio.currentTime = 0;
+    audio.play();
+
+    setTimeout(() => {
+      window.location.href = targetPage;
+    }, 900); // Adjust time to match your sound length
+  }
+</script>
+
+
+</body>
+
+</html>

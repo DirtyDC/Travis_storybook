@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<audio id="pageSound" src="pageturn.mp3" preload="auto"></audio>
+</head> 
+
+ <nav><a href="index.html" class="button-link">
+  <i class="fas fa-home"></i>
+  <br>
+  Home
+</a>
+<br>
+<br>
+
+<body>
+    <h1>The Champion Rises</h1>
+
+    <p>The tournament was intense. Trainers from all over the region competed. Travis and Charmander 
+        faced tough opponents: a Squirtle with lightning speed, an Abra with psychic powers, and even 
+        a strong Growlithe.
+</p>
+<img src="images/p4tournPt1.png" width="70%">
+
+<p>But no matter the challenge, Travis stayed calm and trusted Charmander. They barely made it to the 
+    finals. Their last opponent was a skilled, older trainer with a powerful Dragonair.
+</p>
+<img src="images/p4stadium.png" width="80%" alt="Travis with final opponent">
+<p>Everyone thought Travis would lose. But he stayed focused. “Charmander, dodge and use Smokescreen!” 
+    The field filled with smoke. Then, “Flamethrower, now!”
+</p>
+
+<div class="slideshow">
+  <img src="images/p4gif1.png" class="slide active" />
+  <img src="images/p4gif2.png" class="slide" />
+  <img src="images/p4gif3.png" class="slide" />
+  <img src="images/p4gif4.png" class="slide" />
+</div>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  function showNextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 2000); // change image every 3 seconds
+</script>
+
+<p>The Dragonair didn’t see it coming. The final hit landed—BOOM! Dragonair fainted.
+</p>
+<img src="images/p4dragonhit.png" width="70%" alt="Dragonair getting hit with fieball">
+
+<p>The crowd went wild. Travis was crowned champion, the trophy shining in his hands. 
+    Charmander leapt into his arms. Reporters called him “the underdog wonder.” Trainers 
+    began calling him the greatest young trainer of all time.
+</p>
+<img src="images/p4champion.png" width="50%" alt="Travis holding a trophie">
+<p>Travis looked at his partner and smiled. “This is only the beginning.”
+</p>
+<img src="images/p4end.png" width="70%" alt="Travis and charmnder under a tree">
+<br>
+
+<div class="pagelinks">
+  <a href="#" class="button-link" onclick="playSoundAndGo('page3.html')">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+</div>
+<script>
+  function playSoundAndGo(targetPage) {
+    const audio = document.getElementById('pageSound');
+    audio.currentTime = 0;
+    audio.play();
+
+    setTimeout(() => {
+      window.location.href = targetPage;
+    }, 900); // Adjust time to match your sound length
+  }
+</script>
+</body>
+</html>
